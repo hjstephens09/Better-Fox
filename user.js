@@ -10,7 +10,7 @@
 /****************************************************************************
  * BetterFox                                                                *
  * "Ad meliora."                                                            *
- * version: September 2021                                                  *
+ * version: October 2021                                                    *
  * url: https://github.com/yokoffing/Better-Fox                             *
  * license: https://github.com/yokoffing/Better-Fox/blob/master/LICENSE     *
  * README: https://github.com/yokoffing/Better-Fox/blob/master/README.md    *
@@ -67,6 +67,7 @@ user_pref("network.preload", false);
 user_pref("browser.search.separatePrivateDefault", true);
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
@@ -84,10 +85,6 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 user_pref("network.trr.request_timeout_ms", 4000);
 user_pref("network.trr.send_user-agent_headers", false);
 user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
-
-/** ESNI / ECH ***/
-user_pref("network.dns.echconfig.enabled", true);
-user_pref("network.dns.use_https_rr_as_altsvc", true);
 
 /** PASSWORDS AND AUTOFILL ***/
 user_pref("signon.autofillForms.http", false);
@@ -145,6 +142,7 @@ user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", fa
 user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
 /** MOZILLA ***/
+user_pref("permissions.default.geo", 2);
 user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
 user_pref("app.update.auto", false);
 user_pref("app.update.background.scheduling.enabled", false);
@@ -188,7 +186,6 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
-user_pref("security.dialog_enable_delay", 0);
 user_pref("extensions.webextensions.restrictedDomains", "accounts-static.cdn.mozilla.net,accounts.firefox.com,addons.cdn.mozilla.net,api.accounts.firefox.com,content.cdn.mozilla.net,discovery.addons.mozilla.org,install.mozilla.org,oauth.accounts.firefox.com,profile.accounts.firefox.com,support.mozilla.org,sync.services.mozilla.com");
 
 /** WARNINGS ***/
@@ -232,7 +229,6 @@ user_pref("browser.download.manager.addToRecentDocs", false);
 /** VARIOUS ***/
 user_pref("browser.compactmode.show", true);
 user_pref("browser.menu.showViewImageInfo", true);
-user_pref("browser.tabs.unloadOnLowMemory", true);
 user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("permissions.default.desktop-notification", 2);
